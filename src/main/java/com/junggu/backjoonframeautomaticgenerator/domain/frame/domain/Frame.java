@@ -28,7 +28,7 @@ public class Frame {
         this.isNumber = isNumber;
     }
 
-    public String getForm() throws IOException {
+    public String getForm() {
         StringBuilder sb = new StringBuilder();
         sb.append("public static void main(String[] args) throws IOException {");
 
