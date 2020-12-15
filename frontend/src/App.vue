@@ -38,19 +38,19 @@
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
+      <Template/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import Template from './components/Template'
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld
+    Template
   },
 
   data: () => ({
