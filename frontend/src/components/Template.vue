@@ -38,6 +38,7 @@
         solo
         name="input-7-4"
         label="Solo textarea"
+        :value=text
         ></v-textarea>
   </v-card>
 </template>
@@ -64,15 +65,22 @@ export default {
           value: false
         }
       ],
-      requestValue: []
+      requestValue: {
+        isTestCase: false,
+        isNQuantity: false,
+        isSpaceIncludeNumber: false
+      },
+      text: ''
     }
   },
   methods: {
     test () {
-      for (let i = 0; i < this.options.length; i++) {
-        this.requestValue[i] = (this.options[i].value)
-      }
-      alert(this.requestValue)
+      this.requestValue.isTestCase = this.options[0].value
+      this.requestValue.isNQuantity = this.options[1].value
+      this.requestValue.isSpaceIncludeNumber = this.options[2].value
+
+      this.$store.dispatch('REQUEST_TEMPATE', this.requestValue)
+      this.text = this.$store.state.template.text
     }
   }
 }
