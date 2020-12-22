@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class FrameTest {
 
     @BeforeEach
@@ -14,11 +12,11 @@ class FrameTest {
     }
 
     @Test
-    void getForm() throws IOException {
+    void getForm() {
         Frame frame = Frame.builder()
                 .isTestCase(false)
                 .isNQuantity(false)
-                .isSpaceIncludeNumber(false)
+                .isSpaceIncludeNumber(true)
                 .isNumber(false)
                 .build();
 

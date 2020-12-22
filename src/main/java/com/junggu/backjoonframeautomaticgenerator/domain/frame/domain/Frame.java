@@ -11,13 +11,11 @@ public class Frame {
     private boolean isTestCase;
     private boolean isNQuantity;
     private boolean isSpaceIncludeNumber;
-    private boolean isNumber;
 
     public Frame() {
         this.isTestCase = false;
         this.isNQuantity = false;
         this.isSpaceIncludeNumber = false;
-        this.isNumber = false;
     }
 
     @Builder
@@ -25,7 +23,6 @@ public class Frame {
         this.isTestCase = isTestCase;
         this.isNQuantity = isNQuantity;
         this.isSpaceIncludeNumber = isSpaceIncludeNumber;
-        this.isNumber = isNumber;
     }
 
     public String getForm() {
@@ -48,8 +45,6 @@ public class Frame {
 
         if (isSpaceIncludeNumber) {
             sb.append("int[] array = convertStringArrayToIntegerArray(br.readLine().split(\" \"));");
-        }else if (isNumber) {
-            sb.append("int input = Integer.parseInt(br.readLine());");
         } else {
             sb.append("String input = br.readLine();");
         }

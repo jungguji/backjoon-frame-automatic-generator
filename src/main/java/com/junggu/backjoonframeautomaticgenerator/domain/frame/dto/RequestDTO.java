@@ -1,18 +1,20 @@
 package com.junggu.backjoonframeautomaticgenerator.domain.frame.dto;
 
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 @Getter
 public class RequestDTO {
-    private final boolean isTestCase;
-    private final boolean isNQuantity;
-    private final boolean isSpaceIncludeNumber;
-    private final boolean isNumber;
+    private boolean isTestCase;
+    private boolean isNQuantity;
+    private boolean isSpaceIncludeNumber;
 
-    public RequestDTO(boolean isTestCase, boolean isNQuantity, boolean isSpaceIncludeNumber, boolean isNumber) {
+    @Builder
+    public RequestDTO(boolean isTestCase, boolean isNQuantity, boolean isSpaceIncludeNumber) {
         this.isTestCase = isTestCase;
         this.isNQuantity = isNQuantity;
         this.isSpaceIncludeNumber = isSpaceIncludeNumber;
-        this.isNumber = isNumber;
     }
 }
