@@ -27,7 +27,6 @@ class FrameControllerTest {
                 .isTestCase(true)
                 .isNQuantity(true)
                 .isSpaceIncludeNumber(true)
-                .isNumber(false)
                 .build();
 
         ObjectMapper objectMapper = new ObjectMapper();
