@@ -75,11 +75,11 @@ export default {
   },
   methods: {
     test () {
-      this.requestValue.isTestCase = this.options[0].value
-      this.requestValue.isNQuantity = this.options[1].value
-      this.requestValue.isSpaceIncludeNumber = this.options[2].value
-
-      this.$store.dispatch('REQUEST_TEMPATE', this.requestValue)
+      this.$store.dispatch('REQUEST_TEMPATE', {
+        isTestCase: this.options[0].value,
+        isNQuantity: this.options[1].value,
+        isSpaceIncludeNumber: this.options[2].value
+      })
       this.text = this.$store.state.template.text
     }
   }
