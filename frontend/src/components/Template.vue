@@ -74,8 +74,9 @@ export default {
         testCase: this.options[0].value,
         multiCaseQuantity: this.options[1].value,
         spaceIncludeNumber: this.options[2].value
+      }).then(() => {
+        this.text = this.$store.state.template.text
       })
-      this.text = this.$store.state.template.text
     }
   }
 }
