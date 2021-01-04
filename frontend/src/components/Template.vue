@@ -65,20 +65,15 @@ export default {
           value: false
         }
       ],
-      requestValue: {
-        isTestCase: false,
-        isNQuantity: false,
-        isSpaceIncludeNumber: false
-      },
       text: ''
     }
   },
   methods: {
     test () {
       this.$store.dispatch('REQUEST_TEMPATE', {
-        isTestCase: this.options[0].value,
-        isNQuantity: this.options[1].value,
-        isSpaceIncludeNumber: this.options[2].value
+        testCase: this.options[0].value,
+        multiCaseQuantity: this.options[1].value,
+        spaceIncludeNumber: this.options[2].value
       })
       this.text = this.$store.state.template.text
     }

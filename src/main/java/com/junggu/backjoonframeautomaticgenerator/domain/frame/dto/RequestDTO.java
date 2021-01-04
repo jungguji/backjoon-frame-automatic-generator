@@ -7,18 +7,18 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Getter
 public class RequestDTO {
-    private Boolean isTestCase;
-    private Boolean isNQuantity;
-    private Boolean isSpaceIncludeNumber;
+    private boolean testCase;
+    private boolean multiCaseQuantity;
+    private boolean spaceIncludeNumber;
 
     @Builder
-    public RequestDTO(Boolean isTestCase, Boolean isNQuantity, Boolean isSpaceIncludeNumber) {
-        this.isTestCase = isTestCase;
-        this.isNQuantity = isNQuantity;
-        this.isSpaceIncludeNumber = isSpaceIncludeNumber;
+    public RequestDTO(boolean testCase, boolean multiCaseQuantity, boolean spaceIncludeNumber) {
+        this.testCase = testCase;
+        this.multiCaseQuantity = multiCaseQuantity;
+        this.spaceIncludeNumber = spaceIncludeNumber;
     }
 
     public String toString() {
-        return "tsetcase >> " + this.isTestCase + " nQ >> " + isNQuantity + " space >> " + isSpaceIncludeNumber;
+        return "testCase >> " + this.testCase + " nQ >> " + multiCaseQuantity + " space >> " + spaceIncludeNumber;
     }
 }
