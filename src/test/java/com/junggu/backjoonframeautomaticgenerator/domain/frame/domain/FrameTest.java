@@ -14,9 +14,9 @@ class FrameTest {
     @Test
     void getForm() {
         Frame frame = Frame.builder()
-                .isTestCase(false)
-                .isNQuantity(false)
-                .isSpaceIncludeNumber(true)
+                .testCase(false)
+                .multiCaseQuantity(false)
+                .spaceIncludeNumber(true)
                 .build();
 
         System.out.println(frame.getForm());
