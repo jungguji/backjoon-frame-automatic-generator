@@ -12,15 +12,12 @@ public class FrameController {
 
     @PostMapping(path = "/frame", produces = MediaType.APPLICATION_JSON_VALUE)
     public String getFrame(@RequestBody RequestDTO request) {
-        System.out.println(request.toString());
         Frame frame = Frame.builder()
-                .isTestCase(request.isTestCase())
-                .isNQuantity(request.isMultiCaseQuantity())
-                .isSpaceIncludeNumber(request.isSpaceIncludeNumber())
+                .testCase(request.isTestCase())
+                .multiCaseQuantity(request.isMultiCaseQuantity())
+                .spaceIncludeNumber(request.isSpaceIncludeNumber())
                 .build();
 
-        String test = frame.getForm();
-        System.out.println(test);
-        return test;
+        return frame.getForm();
     }
 }
