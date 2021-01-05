@@ -17,7 +17,6 @@ class FrameTest {
                 .isTestCase(false)
                 .isNQuantity(false)
                 .isSpaceIncludeNumber(true)
-                .isNumber(false)
                 .build();
 
         System.out.println(frame.getForm());

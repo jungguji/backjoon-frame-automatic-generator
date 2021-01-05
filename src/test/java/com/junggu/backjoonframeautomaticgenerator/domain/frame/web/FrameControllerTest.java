@@ -10,7 +10,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.ResultActions;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -20,19 +20,22 @@ class FrameControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
+    @Autowired
+    private ObjectMapper objectMapper;
+
     @Test
     void getFrame() throws Exception {
         //given
         RequestDTO dto = RequestDTO.builder()
-                .isTestCase(true)
-                .isNQuantity(true)
-                .isSpaceIncludeNumber(true)
+                .testCase(false)
+                .multiCaseQuantity(true)
+                .spaceIncludeNumber(false)
                 .build();
 
         ObjectMapper objectMapper = new ObjectMapper();
         String test = objectMapper.writeValueAsString(dto);
 
-        final ResultActions action = mockMvc.perform(get("/frame")
+        final ResultActions action = mockMvc.perform(post("/frame")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(test))
                 .andDo(print());
