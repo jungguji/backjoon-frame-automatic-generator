@@ -1,5 +1,5 @@
 <template>
-  <v-card height="350px">
+  <v-card height="50%">
     <v-navigation-drawer
       absolute
       permanent
@@ -7,7 +7,6 @@
     >
       <template v-slot:prepend>
         <v-list-item>
-
           <v-list-item-content>
             <v-list-item-title class="title">Option</v-list-item-title>
           </v-list-item-content>
@@ -37,7 +36,10 @@
     <v-textarea
         solo
         name="input-7-4"
-        label="Solo textarea"
+        label="옵션을 클릭 시 코드가 제공됩니다."
+        auto-grow
+        rows="14"
+        row-height=14
         :value=text
         ></v-textarea>
   </v-card>
