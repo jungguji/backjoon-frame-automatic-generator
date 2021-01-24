@@ -9,5 +9,4 @@ public class BackjoonFrameAutomaticGeneratorApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BackjoonFrameAutomaticGeneratorApplication.class, args);
 	}
-
 }
