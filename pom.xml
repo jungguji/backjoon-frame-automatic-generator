@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.0</version>
+		<version>2.2.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.junggu</groupId>
 	<artifactId>backjoon-frame-automatic-generator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>backjoon-frame-automatic-generator</name>
-	<description>백준 코딩 테스트 틀 자동 생성기</description>
+	<name>backjoon-automatic-generator</name>
+	<description>Automatic</description>
 
 	<properties>
 		<java.version>8</java.version>
@@ -62,4 +62,23 @@
 		</dependency>
 
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.junggu.backjoonframeautomaticgenerator.BackjoonFrameAutomaticGeneratorApplication</mainClass>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
