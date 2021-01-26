@@ -18,6 +18,7 @@ public class FrameController {
                 .spaceIncludeNumber(request.isSpaceIncludeNumber())
                 .build();
 
+        System.out.println();
         return frame.getForm();
     }
 }
