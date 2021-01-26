@@ -6,7 +6,7 @@ module.exports = {
   devServer: {
     proxy: {
       "/": {
-        target: "http://localhost:9312",
+        target: "https://backjoonframeautomaticgenerat.herokuapp.com/",
         ws: true,
         changeOrigin: true
       }
