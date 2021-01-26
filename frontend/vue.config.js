@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   assetsDir: "static",
-  outputDir: path.resolve(__dirname, "../backend/src/main/resources/static"),
+  outputDir: path.resolve(__dirname, "../src/main/resources/static"),
   devServer: {
     proxy: {
       "/": {
