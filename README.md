@@ -3,6 +3,8 @@
 
 백준 알고리즘 트레이닝 시 기본적으로 작성해야되는 Input code를 대신 생성합니다.
 
+[https://backjoonframeautomaticgenerat.herokuapp.com/](https://backjoonframeautomaticgenerat.herokuapp.com/)
+
 ## 사용 예
 
 ![화면](src/main/resources/static/example.gif)
