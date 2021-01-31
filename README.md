@@ -7,7 +7,7 @@
 
 ## 사용 예
 
-![화면](src/main/resources/static/example.gif)
+![화면](https://user-images.githubusercontent.com/20533433/106384503-94945180-640e-11eb-8cd5-d48f5551bb36.gif)
 
 * 문제에 따라 필요한 옵션을 선택하면 그에 맞는 탬플릿 코드를 제공하여 줍니다.
 
