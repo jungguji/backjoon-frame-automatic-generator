@@ -29,14 +29,6 @@ public class StringBuilder {
         return sb;
     }
 
-    private void depth(String str) {
-        if (str.endsWith("{")) {
-            addDepth();
-        } else if (str.endsWith("}")) {
-            removeDepth();
-        }
-    }
-
     public String toString() {
         return sb.toString();
     }
