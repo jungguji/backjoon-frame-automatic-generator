@@ -9,18 +9,21 @@ public class Frame {
     private boolean testCase;
     private boolean multiCaseQuantity;
     private boolean spaceIncludeNumber;
+    private boolean inputNumber;
 
     public Frame() {
         this.testCase = false;
         this.multiCaseQuantity = false;
         this.spaceIncludeNumber = false;
+        this.inputNumber = false;
     }
 
     @Builder
-    public Frame(boolean testCase, boolean multiCaseQuantity, boolean spaceIncludeNumber) {
+    public Frame(boolean testCase, boolean multiCaseQuantity, boolean spaceIncludeNumber, boolean inputNumber) {
         this.testCase = testCase;
         this.multiCaseQuantity = multiCaseQuantity;
         this.spaceIncludeNumber = spaceIncludeNumber;
+        this.inputNumber = inputNumber;
     }
 
     public String getForm() {
@@ -43,6 +46,8 @@ public class Frame {
 
         if (spaceIncludeNumber) {
             sb.append("int[] array = convertStringArrayToIntegerArray(br.readLine().split(\" \"));");
+        } else if (inputNumber) {
+            sb.append("int input = Integer.parseInt(br.readLine());");
         } else {
             sb.append("String input = br.readLine();");
         }

@@ -16,9 +16,9 @@ public class FrameController {
                 .testCase(request.isTestCase())
                 .multiCaseQuantity(request.isMultiCaseQuantity())
                 .spaceIncludeNumber(request.isSpaceIncludeNumber())
+                .inputNumber(request.isInputNumber())
                 .build();
 
-        System.out.println();
         return frame.getForm();
     }
 }

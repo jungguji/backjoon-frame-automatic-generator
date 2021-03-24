@@ -65,6 +65,11 @@ export default {
           label: '스페이스가 포함된 숫자',
           color: 'info',
           value: false
+        },
+        {
+          label: 'input이 숫자 경우',
+          color: 'info',
+          value: false
         }
       ],
       text: ''
@@ -75,7 +80,8 @@ export default {
       this.$store.dispatch('REQUEST_TEMPATE', {
         testCase: this.options[0].value,
         multiCaseQuantity: this.options[1].value,
-        spaceIncludeNumber: this.options[2].value
+        spaceIncludeNumber: this.options[2].value,
+        inputNumber: this.options[3].value
       }).then(() => {
         this.text = this.$store.state.template.text
       })

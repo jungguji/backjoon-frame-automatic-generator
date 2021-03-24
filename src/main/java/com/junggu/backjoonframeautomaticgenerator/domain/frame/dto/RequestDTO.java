@@ -10,12 +10,14 @@ public class RequestDTO {
     private boolean testCase;
     private boolean multiCaseQuantity;
     private boolean spaceIncludeNumber;
+    private boolean inputNumber;
 
     @Builder
-    public RequestDTO(boolean testCase, boolean multiCaseQuantity, boolean spaceIncludeNumber) {
+    public RequestDTO(boolean testCase, boolean multiCaseQuantity, boolean spaceIncludeNumber, boolean inputNumber) {
         this.testCase = testCase;
         this.multiCaseQuantity = multiCaseQuantity;
         this.spaceIncludeNumber = spaceIncludeNumber;
+        this.inputNumber = inputNumber;
     }
 
     public String toString() {
